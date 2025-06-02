@@ -24,8 +24,8 @@ public class Usuario {
     @EqualsAndHashCode.Include
     private Long id;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false, cascade = {CascadeType.MERGE, CascadeType.REFRESH, CascadeType.REMOVE})
-    @JoinColumn(name = "TB_SOS_GRUPO_USUARIO_ID", nullable = false, unique = true,
+    @OneToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "TB_SOS_GRUPO_USUARIO_ID", referencedColumnName = "id", nullable = false, unique = true,
                 foreignKey = @ForeignKey(name = "TB_SOS_USUARIO_GRUPOUSUARIO_FK"))
     private GrupoUsuario grupoUsuario;
 

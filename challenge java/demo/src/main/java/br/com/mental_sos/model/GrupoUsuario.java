@@ -23,8 +23,6 @@ public class GrupoUsuario {
     @Column(name = "ID_GRUPO", nullable = false)
     private TipoGrupoUsuario tipoGrupo;
 
-    @OneToOne(fetch = FetchType.LAZY, optional = false, cascade = {CascadeType.MERGE, CascadeType.REFRESH})
-    @JoinColumn(name = "TB_SOS_USUARIO_ID", nullable = false, unique = true,
-                foreignKey = @ForeignKey(name = "TB_SOS_GRUPOUSUARIO_USUARIO_FK"))
+    @OneToOne(mappedBy = "grupoUsuario", fetch = FetchType.LAZY, optional = false)
     private Usuario usuario;
 }

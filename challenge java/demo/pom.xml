@@ -9,9 +9,9 @@
         <relativePath/>
     </parent>
     <groupId>br.com.mental_sos</groupId>
-    <artifactId>mottu</artifactId>
+    <artifactId>mental_sos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ChallengeJavaMottu</name>
+    <name>MentalSOS</name>
     <description>Projeto para a Global Solution</description>
 
     <properties>
